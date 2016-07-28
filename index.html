@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="./css/assets/jquery-ui.css"/>
     <link rel="stylesheet" href="./css/assets/jquery-ui.theme.min.css"/>
     <link rel="stylesheet" href="./css/main.css"/>
+    <!--
     <script src="./js/assets/jquery-2.2.4.min.js"></script>
     <script src="./js/assets/jquery-ui.min.js"></script>
-    <script src="./js/assets/jquery-dateFormat.min.js"></script>
     <script src="./js/assets/underscore.js"></script>
     <script src="./js/assets/backbone.js"></script>
     <script src="./js/assets/backbone.localStorage.js"></script>
@@ -22,9 +22,30 @@
     <script src="./js/views/event-view.js"></script>
     <script src="./js/views/week-view.js"></script>
     <script src="./js/views/calendar-view.js"></script>
-    <script src="./js/init.js"></script>
-    <script data-main="./js/init" src="./js/require.js"></script>
+    -->
+    <!--<script src="./js/init.js"></script>-->
 
+    <script data-main="js/init" src="./js/require.js"></script>
+    <script>
+        require.config({
+            baseUrl: "./js",
+            paths: {
+                "assets": "assets",
+                "utils": "utils",
+                "models": "models",
+                "collections": "collections",
+                "views": "views",
+                "jquery": "assets/jquery-2.2.4.min",
+                "underscore": "assets/underscore",
+                "dateFormat": "assets/jquery-dateFormat.min",
+                "localstorage": "assets/backbone.localStorage",
+                "backbone": "assets/backbone"
+            },
+            shim: {
+                'dateFormat': ['jquery']
+            }
+        });
+    </script>
 </head>
 
 <body>

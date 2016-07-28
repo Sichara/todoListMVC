@@ -1,8 +1,10 @@
-(function ($, Backbone, views, _, utils) {
-    $(function () {
+define(
+    ['jquery', 'backbone', 'app', 'views/WeekCalendar', 'utils/utils', 'underscore'],
+    function ($, Backbone, app, WeekCalendar, utils, _) {
+        //$(function () {
         var hoursFormat = utils.dateFormat('HH');
         var minutesFormat = utils.dateFormat('mm');
-        views.EventCalendar = Backbone.View.extend({
+        return Backbone.View.extend({
             template: _.template($('#timeLineTemplate').html()),
             el: '#calendar',
             events: {
@@ -16,7 +18,7 @@
             initialize: function () {
                 var self = this;
                 this.render();
-                this.week = new views.WeekCalendar();
+                this.week = new WeekCalendar();
                 this.$('[name=date]').datepicker({
                     showOtherMonths: true,
                     selectOtherMonths: true,
@@ -146,10 +148,7 @@
             }
         });
 
-    });
+        //});
 
-})(jQuery,
-    Backbone,
-    window.app.views,
-    _,
-    window.app.utils);
+    }
+);
