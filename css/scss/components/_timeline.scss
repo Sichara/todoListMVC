@@ -1,0 +1,23 @@
+.b-timeline {
+  font-size: 11px;
+  font-family: sans-serif;
+
+  &_hour {
+    height: $hour-height;
+    width: 50px;
+    text-align: right;
+    padding: 4px 4px;
+    @include box-sizing(border-box);
+    background: $timeline-bg-color;
+    border: 1px solid $border-color;
+    border-bottom-width: 0;
+
+    &:last-child {
+      border-bottom-width: 1px;
+    }
+  }
+
+  &_empty-hour {
+    height: $weekend-header-height + 10px;
+  }
+}

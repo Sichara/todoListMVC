@@ -1,0 +1,52 @@
+.b-calendar-day {
+  position: relative;
+  width: $event-width;
+
+  &_title {
+    height: $weekend-header-height;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid $border-color;
+    border-bottom-width: 0;
+    border-left-width: 0;
+
+    &--current-day {
+      background: $current-day-bg-color;
+    }
+
+    &:first-child {
+      border-left-width: 1px;
+    }
+  }
+
+  &_hours {
+    border: 1px solid $border-color;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    position: relative;
+  }
+
+  &_hour {
+    min-width: $event-width;
+    height: $hour-height;
+    border: 0 solid $border-color;
+    border-bottom-width: 1px;
+    @include box-sizing(border-box);
+
+
+    & div {
+      height: 25%;
+
+      &:nth-child(2n+1) {
+        border-bottom: 1px dotted $border-color;
+      }
+      &:nth-child(2) {
+        border-bottom: 1px solid $border-color;
+      }
+    }
+  }
+
+  &--weekend {
+    background: $weekend-bg-color;
+  }
+}

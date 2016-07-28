@@ -1,0 +1,80 @@
+.b-week-calendar {
+  margin: 10px auto; }
+  .b-week-calendar_timeline {
+    float: left; }
+  .b-week-calendar_week::after {
+    content: "";
+    display: block;
+    clear: both; }
+  .b-week-calendar_day {
+    float: left; }
+
+.b-timeline {
+  font-size: 11px;
+  font-family: sans-serif; }
+  .b-timeline_hour {
+    height: 60px;
+    width: 50px;
+    text-align: right;
+    padding: 4px 4px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    background: #f6f9fc;
+    border: 1px solid #ddd;
+    border-bottom-width: 0; }
+    .b-timeline_hour:last-child {
+      border-bottom-width: 1px; }
+  .b-timeline_empty-hour {
+    height: 40px; }
+
+.b-calendar-day {
+  position: relative;
+  width: 100px; }
+  .b-calendar-day_title {
+    height: 30px;
+    text-align: center;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-bottom-width: 0;
+    border-left-width: 0; }
+    .b-calendar-day_title--current-day {
+      background: #ffb; }
+    .b-calendar-day_title:first-child {
+      border-left-width: 1px; }
+  .b-calendar-day_hours {
+    border: 1px solid #ddd;
+    border-left-width: 0;
+    border-bottom-width: 0;
+    position: relative; }
+  .b-calendar-day_hour {
+    min-width: 100px;
+    height: 60px;
+    border: 0 solid #ddd;
+    border-bottom-width: 1px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+    .b-calendar-day_hour div {
+      height: 25%; }
+      .b-calendar-day_hour div:nth-child(2n+1) {
+        border-bottom: 1px dotted #ddd; }
+      .b-calendar-day_hour div:nth-child(2) {
+        border-bottom: 1px solid #ddd; }
+  .b-calendar-day--weekend {
+    background: #b5dc91; }
+
+.b-event {
+  width: 100px;
+  position: absolute;
+  background: #06f;
+  color: #fff;
+  padding: 2px 1px 2px 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/*# sourceMappingURL=main.css.map */

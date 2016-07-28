@@ -1,0 +1,16 @@
+.b-week-calendar {
+  margin: 10px auto;
+
+  &_timeline {
+    float: left;
+  }
+
+  &_week {
+    @include clearfix;
+  }
+
+  &_day {
+    float: left;
+  }
+
+}
