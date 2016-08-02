@@ -1,7 +1,6 @@
-require(['app', 'jquery', 'views/EventCalendar'],
-    function (app, $, EventCalendar) {
+require(['jquery', 'views/EventCalendar'],
+    function ($, EventCalendar) {
         $(function () {
-            app.initialize();
             var weekCalendar = new EventCalendar;
         });
     });

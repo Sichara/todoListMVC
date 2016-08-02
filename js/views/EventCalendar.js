@@ -1,6 +1,6 @@
 define(
-    ['jquery', 'backbone', 'app', 'views/WeekCalendar', 'utils/utils', 'underscore'],
-    function ($, Backbone, app, WeekCalendar, utils, _) {
+    ['jquery', 'backbone', 'views/WeekCalendar', 'utils/utils', 'underscore', 'assets/jquery-ui'],
+    function ($, Backbone, WeekCalendar, utils, _) {
         //$(function () {
         var hoursFormat = utils.dateFormat('HH');
         var minutesFormat = utils.dateFormat('mm');
@@ -103,7 +103,7 @@ define(
             showChangeEventForm: function (e) {
                 var formChangeEvent = this.$('#formChangeEvent'),
                     formAddEvent = this.$('#formAddEvent'),
-                    $event = $(e.target),
+                    $event = $(e.currentTarget),
                     $day = $event.parents('.b-calendar-day');
 
                 e.preventDefault();

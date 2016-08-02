@@ -1,7 +1,7 @@
-define('Event',
-    ['jquery', 'backbone', 'app', 'underscore'],
-    function ($, Backbone, app, _) {
-        //$(function () {
+define(
+    ['jquery', 'backbone', 'underscore', 'utils/utils', 'const'],
+    function ($, Backbone, _, utils, CONST) {
+
         return Backbone.View.extend({
                 template: _.template($('#eventTemplate').html()),
                 tagName: 'div',
@@ -19,13 +19,13 @@ define('Event',
                     modelJSON = this.model.toJSON();
                     this.$el.html(this.template(modelJSON));
 
-                    start = app.utils.parseTime(modelJSON.timeStart);
-                    end = app.utils.parseTime(modelJSON.timeEnd);
+                    start = utils.parseTime(modelJSON.timeStart);
+                    end = utils.parseTime(modelJSON.timeEnd);
                     expand = modelJSON.expand;
 
-                    top = app.CONST.HOUR_HEIGHT * start;
-                    height = app.CONST.HOUR_HEIGHT * (end - start);
-                    left = expand * app.CONST.DAY_WIDTH;
+                    top = CONST.HOUR_HEIGHT * start;
+                    height = CONST.HOUR_HEIGHT * (end - start);
+                    left = expand * CONST.DAY_WIDTH;
                     this.$el.css({
                         top: top + 'px',
                         height: height + 'px',
@@ -36,6 +36,5 @@ define('Event',
                 }
             });
 
-        //});
     }
 );

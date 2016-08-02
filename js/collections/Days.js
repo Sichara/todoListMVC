@@ -1,6 +1,6 @@
 define(
-    ['jquery', 'backbone', 'models/Day', 'localstorage'],
-    function ($, Backbone, Day) {
+    ['jquery', 'backbone', 'localstorage', 'models/Day'],
+    function ($, Backbone, backboneLocalStorage, Day) {
         return Backbone.Collection.extend({
             model: Day,
             localStorage: new Backbone.LocalStorage("backbone-days-collection"),

@@ -6,7 +6,7 @@
 define(
     ['jquery', 'backbone'],
     function ($, Backbone) {
-        Event = Backbone.Model.extend({
+        return Backbone.Model.extend({
             url: '/',
 
             defaults: function () {

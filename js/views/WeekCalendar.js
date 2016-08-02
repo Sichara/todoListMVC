@@ -1,7 +1,7 @@
 define(
-    ['jquery', 'backbone', 'collections/Days', 'collections/DayEvents', 'views/Event', 'utils/utils', 'underscore', 'app'],
-    function ($, Backbone, DaysCollection, DayEventsCollection, Event, utils, _, app) {
-        //$(function () {
+    ['jquery', 'backbone', 'utils/utils', 'underscore', 'collections/Days', 'collections/DayEvents', 'views/Event', 'const'],
+    function ($, Backbone, utils, _, DaysCollection, DayEventsCollection, EventView, CONST) {
+
             var dateFormat = utils.dateFormat('dd.MM.yyyy');
             var titleFormat = utils.dateFormat('dd.MM.yyyy ddd');
 
@@ -26,7 +26,7 @@ define(
 
                 clearAllEvents: function () {
                     this.$('.b-event').remove();
-                    this.$('.b-calendar-day').width(app.CONST.DAY_WIDTH);
+                    this.$('.b-calendar-day').width(CONST.DAY_WIDTH);
                 },
 
                 addAllWeekEvents: function (dayCollection, options) {
@@ -98,12 +98,12 @@ define(
 
                 addOneEvent: function (model, $day) {
                     var $dayTimeLine, $event, currentDayWidth,
-                        newEvent = new Event({
+                        newEvent = new EventView({
                             model: model
                         });
 
                     $dayTimeLine = $day.find('.b-calendar-day_hours');
-                    currentDayWidth = $day.width() - app.CONST.DAY_WIDTH;
+                    currentDayWidth = $day.width() - CONST.DAY_WIDTH;
 
                     if ($dayTimeLine.length) {
                         $event = newEvent.render().$el;
@@ -113,7 +113,7 @@ define(
                             currentDayWidth = $event.position().left
                         }
 
-                        $day.width(currentDayWidth + app.CONST.DAY_WIDTH);
+                        $day.width(currentDayWidth + CONST.DAY_WIDTH);
                     }
 
                 },
@@ -186,8 +186,6 @@ define(
                     }
                 }
             });
-
-        //});
 
     }
 );
