@@ -11,13 +11,14 @@ require.config({
         "jquery": "assets/jquery-2.2.4.min",
         "underscore": "assets/underscore",
         "dateFormat": "assets/jquery-dateFormat.min",
-        "localstorage": "assets/backbone.localStorage",
-        "backbone": "assets/backbone"
+        "backboneLocalStorage": "assets/backbone.localStorage",
+        "backbone": "assets/backbone",
+        "text": "assets/text"
     },
     shim: {
         'dateFormat': ['jquery'],
         'backbone': ['underscore', 'jquery'],
-        'localstorage': {
+        'backboneLocalStorage': {
             deps: ['backbone'],
             exports: 'Backbone.LocalStorage'
         },

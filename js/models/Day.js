@@ -1,6 +1,8 @@
 define(
-    ['backbone', 'collections/DayEvents'],
-    function (Backbone, DayEvents) {
+    function (require) {
+        var Backbone = require('backbone'),
+            DayEvents = require('collections/DayEvents');
+
         return Backbone.Model.extend({
             url: '/',
             idAttribute: "date",

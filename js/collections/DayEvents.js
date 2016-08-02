@@ -1,6 +1,8 @@
 define(
-    ['jquery', 'backbone', 'localstorage', 'models/Event'],
-    function ($, Backbone, backboneLocalStorage, Event) {
+    function (require) {
+        var Event = require('models/Event');
+        require('backboneLocalStorage');
+
         return Backbone.Collection.extend({
             localStorage: new Backbone.LocalStorage("backbone-days-events-collection"),
             model: Event,
@@ -8,7 +10,5 @@ define(
             initialize: function () {
 
             }
-
         });
-
     });

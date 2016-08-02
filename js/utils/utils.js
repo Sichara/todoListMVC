@@ -1,5 +1,8 @@
-define(['jquery', 'dateFormat'],
-    function ($) {
+define(
+    function (require) {
+        var $ = require('jquery');
+        require('dateFormat');
+
         return {
             dateFormat: function (format) {
                 return function (date) {

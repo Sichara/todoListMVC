@@ -1,0 +1,11 @@
+<div class="b-week-calendar_timeline b-timeline">
+    <div class="b-timeline_empty-hour"></div>
+    <% _.each(timeLine, function(time){%>
+    <div class="b-timeline_hour">
+        <%= time.hours %>:<%= time.minutes %>
+    </div>
+
+    <% }); %>
+</div>
+<div class="b-week-calendar_week">
+</div>

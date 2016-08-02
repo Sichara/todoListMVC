@@ -1,0 +1,75 @@
+<div id="calendar">
+    <div id="date"></div>
+    <form id="formAddEvent">
+        <fieldset>
+            <legend>Add event</legend>
+            <p>
+                <span class="title">Title</span>
+                <span><input type="text" name="title" required=""></span>
+            </p>
+
+            <p>
+                <span class="title">Date</span>
+                <span><input type="text" name="date" required=""></span>
+            </p>
+
+            <p>
+                <span class="title">Time from</span>
+                <span><input type="time" name="timeStart" required=""></span>
+            </p>
+
+            <p>
+                <span class="title">Time to</span>
+                <span><input type="time" name="timeEnd" required=""></span>
+            </p>
+
+            <p>
+                <span class="title">Description</span>
+                <span><textarea name="description"></textarea></span>
+            </p>
+
+            <p>
+                <button type="submit">Save</button>
+            </p>
+        </fieldset>
+    </form>
+    <form id="formChangeEvent" style="display:none;">
+        <fieldset>
+            <legend>Edit event</legend>
+            <p>
+                <span class="title">Title</span>
+                <span><input type="text" name="title" required=""></span>
+            </p>
+
+            <p>
+                <span class="title">Date</span>
+                <span><input type="text" name="date" required=""></span>
+            </p>
+
+            <p>
+                <span class="title">Time from</span>
+                <span><input type="time" name="timeStart" required=""></span>
+            </p>
+
+            <p>
+                <span class="title">Time to</span>
+                <span><input type="time" name="timeEnd" required=""></span>
+            </p>
+
+            <p>
+                <span class="title">Description</span>
+                <span><textarea name="description"></textarea></span>
+            </p>
+
+            <p>
+                <button type="submit">Save</button>
+                <button type="button" name="delete">Delete</button>
+                <button type="button" name="cancel">Cancel</button>
+            </p>
+        </fieldset>
+    </form>
+
+    <div class="b-week-calendar">
+
+    </div>
+</div>

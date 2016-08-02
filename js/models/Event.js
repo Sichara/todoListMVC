@@ -1,11 +1,8 @@
-/*(function ($, Backbone, models) {
-
-
- })(jQuery, Backbone, window.app.models);*/
-
 define(
-    ['jquery', 'backbone'],
-    function ($, Backbone) {
+    function (require) {
+        var $ = require('jquery'),
+            Backbone = require('backbone');
+
         return Backbone.Model.extend({
             url: '/',
 

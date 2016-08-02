@@ -1,12 +1,19 @@
 define(
-    ['jquery', 'backbone', 'utils/utils', 'underscore', 'collections/Days', 'collections/DayEvents', 'views/Event', 'const'],
-    function ($, Backbone, utils, _, DaysCollection, DayEventsCollection, EventView, CONST) {
+    function (require) {
+        var Backbone = require('backbone'),
+            _ = require('underscore'),
+            utils = require('utils/utils'),
+            CONST = require('const'),
+            template = require('text!../../templates/day_template.html'),
+            DaysCollection = require('collections/Days'),
+            DayEventsCollection = require('collections/DayEvents'),
+            EventView = require('views/Event');
 
             var dateFormat = utils.dateFormat('dd.MM.yyyy');
             var titleFormat = utils.dateFormat('dd.MM.yyyy ddd');
 
             return Backbone.View.extend({
-                template: _.template($('#dayTemplate').html()),
+                template: _.template(template),
                 el: '.b-week-calendar_week',
 
                 initialize: function () {

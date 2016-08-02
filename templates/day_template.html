@@ -1,0 +1,17 @@
+<div class="b-week-calendar_day b-calendar-day <%= day.weekend ? 'b-calendar-day--weekend' : '' %>"
+     data-date="<%- day.date %>">
+    <div class="b-calendar-day_title <%= day.currentDay ? 'b-calendar-day_title--current-day' : '' %>">
+        <%- day.title %>
+    </div>
+
+    <div class="b-calendar-day_hours">
+        <% for(var i = 0; i < 24; i++) {%>
+        <div class="b-calendar-day_hour">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <% } %>
+    </div>
+</div>

@@ -1,11 +1,19 @@
 define(
-    ['jquery', 'backbone', 'views/WeekCalendar', 'utils/utils', 'underscore', 'assets/jquery-ui'],
-    function ($, Backbone, WeekCalendar, utils, _) {
-        //$(function () {
+    function (require) {
+        var Backbone = require('backbone'),
+            _ = require('underscore'),
+            $ = require(['jquery', 'assets/jquery-ui']),
+            utils = require('utils/utils'),
+            template = require('text!../../templates/timeline_template.html'),
+            WeekCalendar = require('views/WeekCalendar');
+
+        require('assets/jquery-ui');
+
         var hoursFormat = utils.dateFormat('HH');
         var minutesFormat = utils.dateFormat('mm');
+
         return Backbone.View.extend({
-            template: _.template($('#timeLineTemplate').html()),
+            template: _.template(template),
             el: '#calendar',
             events: {
                 'submit #formAddEvent': 'addEvent',
