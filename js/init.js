@@ -1,8 +1,6 @@
-define(
-    function (require) {
-        var EventCalendar = require('views/EventCalendar'),
-            $ = require('jquery'),
-            template = require('text!../templates/main.html');
+require(
+    ['jquery', 'views/EventCalendar', 'text!../templates/main.html', 'config'],
+    function ($, EventCalendar, template) {
 
         $('body').append(template);
         new EventCalendar;

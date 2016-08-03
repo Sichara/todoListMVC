@@ -1,2 +1,5 @@
 .idea/
 **/*.ini
+.sass-cache/
+node_modules/
+public/

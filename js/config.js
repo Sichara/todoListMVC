@@ -1,4 +1,7 @@
 require.config({
+    "name": 'init',
+    out: 'app.js',
+
     urlArgs: "bust=" + (new Date()).getTime(),
     baseUrl: "./js",
     paths: {
