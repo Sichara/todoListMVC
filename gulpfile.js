@@ -81,5 +81,5 @@ gulp.task('scripts', function () {
 });
 
 gulp.task('default', function () {
-    console.log('ok');
+    gulp.start('scripts', 'styles');
 });
